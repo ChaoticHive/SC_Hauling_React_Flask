@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./utils/styles/styles.css">
+<script src="./utils/js/scripts.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC Hauling Frontend</title>
+</head>
+<body>
+    <div class="header">
+        <!-- <h1>Welcome to SC Hauling Frontend</h1>
+        <p>This is a placeholder for the frontend application.</p> -->
+        <h1>📦 Star Citizen Route Optimizer</h1>
+        <br><br>
+    </div>
+    <div class="form-card">
+        <h2 class="form_heading">📦 Upload Hauling Screenshots</h2>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="screenshots" class="custom-file-upload">
+                📁 Choose Screenshots
+            </label>
+            
+            
+            <!-- <input type="file" id="screenshots" name="screenshots" accept="image/*" multiple required> -->
+            <label for="waypoint_input">Select Your Starting Location</label>
+            <div class="waypoint-input-wrapper">
+                <input type="text" id="waypoint_input" name="waypoint_input" autocomplete="off" />
+                <div id="waypoint_dropdown" class="dropdown-list" style="display:none;"></div>
+            </div>
+            
+            <!-- <datalist id="waypoints">
+                <option value="">Loading...</option>
+            </datalist> -->
+            
+            
+            
+            <label for="cargo_capacity">Cargo Capacity (SCU):</label>
+            <input type="number" name="cargo_capacity" id="cargo_capacity" value="32" min="1" required>
+
+            <button type="submit">🚀 Upload & Optimize</button>
+        </form>
+    </div>
+</body>
+</html>
