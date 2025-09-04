@@ -1221,17 +1221,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Cellin",
-    "Outpost Index": "Cellin 16",
-    "Time Index": "Cellin",
-    "Waypoint Name": "Forward Operating Base",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Cellin 11",
     "Outpost Index": "Cellin 17",
     "Time Index": "Cellin 38",
@@ -2772,17 +2761,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Lyria",
-    "Outpost Index": "Lyria 25",
-    "Time Index": "Lyria",
-    "Waypoint Name": "Forward Operating Base",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Lyria 19",
     "Outpost Index": "Lyria 26",
     "Time Index": "Lyria 29",
@@ -2849,17 +2827,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Lyria",
-    "Outpost Index": "Lyria 33",
-    "Time Index": "Lyria",
-    "Waypoint Name": "Comm Array",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Lyria 25",
     "Outpost Index": "Lyria 34",
     "Time Index": "Lyria 03",
@@ -2901,17 +2868,6 @@
     "Cartesian Coordinate X": 79.97541,
     "Cartesian Coordinate Y": -217.911186,
     "Cartesian Coordinate Z": 162.334817,
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "Wala",
-    "Outpost Index": "Wala 12",
-    "Time Index": "Wala",
-    "Waypoint Name": "Underground Facility",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
     "Body Selection": ""
   },
   {
@@ -2959,17 +2915,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Wala",
-    "Outpost Index": "Wala 18",
-    "Time Index": "Wala",
-    "Waypoint Name": "Forward Operating Base",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Wala 12",
     "Outpost Index": "Wala 19",
     "Time Index": "Wala 33",
@@ -3014,17 +2959,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Wala",
-    "Outpost Index": "Wala 24",
-    "Time Index": "Wala",
-    "Waypoint Name": "Comm Array",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Wala 16",
     "Outpost Index": "Wala 25",
     "Time Index": "Wala 44",
@@ -3033,17 +2967,6 @@
     "Cartesian Coordinate X": 365.821,
     "Cartesian Coordinate Y": -257.408,
     "Cartesian Coordinate Z": 24,
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "microTech",
-    "Outpost Index": "microTech 00",
-    "Time Index": "microTech",
-    "Waypoint Name": "Landing Zone",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
     "Body Selection": ""
   },
   {
@@ -3066,17 +2989,6 @@
     "Cartesian Coordinate X": 520.336,
     "Cartesian Coordinate Y": 435.087,
     "Cartesian Coordinate Z": 736.225,
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "microTech",
-    "Outpost Index": "microTech 04",
-    "Time Index": "microTech",
-    "Waypoint Name": "Orbital Station",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
     "Body Selection": ""
   },
   {
@@ -3187,17 +3099,6 @@
     "Cartesian Coordinate X": -666.067307,
     "Cartesian Coordinate Y": 726.221158,
     "Cartesian Coordinate Z": 179.517786,
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "microTech",
-    "Outpost Index": "microTech 37",
-    "Time Index": "microTech",
-    "Waypoint Name": "Underground Facility",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
     "Body Selection": ""
   },
   {
@@ -3322,17 +3223,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "microTech",
-    "Outpost Index": "microTech 50",
-    "Time Index": "microTech",
-    "Waypoint Name": "Distribution Center",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "microTech 27",
     "Outpost Index": "microTech 51",
     "Time Index": "microTech 19",
@@ -3410,17 +3300,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "microTech",
-    "Outpost Index": "microTech 59",
-    "Time Index": "microTech",
-    "Waypoint Name": "Forward Operating Base",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "microTech 34",
     "Outpost Index": "microTech 60",
     "Time Index": "microTech 71",
@@ -3462,28 +3341,6 @@
     "Cartesian Coordinate X": 896.328712,
     "Cartesian Coordinate Y": 430.723443,
     "Cartesian Coordinate Z": -116.470855,
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "microTech",
-    "Outpost Index": "microTech 65",
-    "Time Index": "microTech",
-    "Waypoint Name": "Emergency Shelters",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "microTech",
-    "Outpost Index": "microTech 71",
-    "Time Index": "microTech",
-    "Waypoint Name": "Comm Array",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
     "Body Selection": ""
   },
   {
@@ -3564,17 +3421,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Calliope",
-    "Outpost Index": "Calliope 06",
-    "Time Index": "Calliope",
-    "Waypoint Name": "Underground Facility",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Calliope 15",
     "Outpost Index": "Calliope 07",
     "Time Index": "Calliope 14",
@@ -3641,17 +3487,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Calliope",
-    "Outpost Index": "Calliope 14",
-    "Time Index": "Calliope",
-    "Waypoint Name": "Forward Operating Base",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Calliope 10",
     "Outpost Index": "Calliope 15",
     "Time Index": "Calliope 19",
@@ -3696,17 +3531,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Calliope",
-    "Outpost Index": "Calliope 20",
-    "Time Index": "Calliope",
-    "Waypoint Name": "Comm Array",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Calliope 14",
     "Outpost Index": "Calliope 21",
     "Time Index": "Calliope 05",
@@ -3729,17 +3553,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Cli",
-    "Outpost Index": "Clio 07",
-    "Time Index": "Clio",
-    "Waypoint Name": "Racetrack",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Clio 07",
     "Outpost Index": "Clio 08",
     "Time Index": "Clio 21",
@@ -3748,17 +3561,6 @@
     "Cartesian Coordinate X": -327.835,
     "Cartesian Coordinate Y": -78.8872,
     "Cartesian Coordinate Z": -13.657,
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "Clio",
-    "Outpost Index": "Clio 10",
-    "Time Index": "Clio",
-    "Waypoint Name": "Forward Operating Base",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
     "Body Selection": ""
   },
   {
@@ -3784,17 +3586,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Clio",
-    "Outpost Index": "Clio 14",
-    "Time Index": "Clio",
-    "Waypoint Name": "Comm Array",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Clio 05",
     "Outpost Index": "Clio 15",
     "Time Index": "Clio 06",
@@ -3817,17 +3608,6 @@
     "Body Selection": ""
   },
   {
-    "InternalName": "Euterpe",
-    "Outpost Index": "Euterpe 07",
-    "Time Index": "Euterpe",
-    "Waypoint Name": "Racetrack",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
-    "Body Selection": ""
-  },
-  {
     "InternalName": "Euterpe 03",
     "Outpost Index": "Euterpe 08",
     "Time Index": "Euterpe 02",
@@ -3836,17 +3616,6 @@
     "Cartesian Coordinate X": -42.103951,
     "Cartesian Coordinate Y": 198.137943,
     "Cartesian Coordinate Z": 66.610567,
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "Euterpe",
-    "Outpost Index": "Euterpe 10",
-    "Time Index": "Euterpe",
-    "Waypoint Name": "Forward Operating Base",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
     "Body Selection": ""
   },
   {
@@ -3869,17 +3638,6 @@
     "Cartesian Coordinate X": 212.585991,
     "Cartesian Coordinate Y": -4.557799,
     "Cartesian Coordinate Z": 18.228559,
-    "Body Selection": ""
-  },
-  {
-    "InternalName": "Euterpe",
-    "Outpost Index": "Euterpe 14",
-    "Time Index": "Euterpe",
-    "Waypoint Name": "Comm Array",
-    "Short Name": "",
-    "Cartesian Coordinate X": "",
-    "Cartesian Coordinate Y": "",
-    "Cartesian Coordinate Z": "",
     "Body Selection": ""
   },
   {
