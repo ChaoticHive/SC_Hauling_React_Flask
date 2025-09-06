@@ -39,15 +39,21 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
+    background: #003166;
     border: 1px solid #ccc;
     max-height: 300px;
     overflow-y: auto;
     z-index: 1000;
     box-sizing: border-box;
+    color: white;
 }
-
 .form-card {
+    background: white;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     position: relative; /* Ensure dropdown is positioned relative to form */
 }
 .dropdown-list div {
@@ -58,40 +64,21 @@ body {
     background: #eee;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.form-card {
-    background-color: white;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.locations-container {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #003166;
 }
+
+
+
+
+
+
+
 
 .form_heading{
     color: #333;

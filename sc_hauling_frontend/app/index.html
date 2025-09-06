@@ -11,23 +11,81 @@
     <div class="header">
         <!-- <h1>Welcome to SC Hauling Frontend</h1>
         <p>This is a placeholder for the frontend application.</p> -->
-        <h1>📦 Star Citizen Route Optimizer</h1>
+        <h1>📦 WIP</h1>
         <br><br>
     </div>
     <div class="form-card">
-        <h2 class="form_heading">📦 Upload Hauling Screenshots</h2>
+        <!-- <h2 class="form_heading">📦 Upload Hauling Screenshots</h2> -->
         <form action="/" method="POST" enctype="multipart/form-data">
-            <label for="screenshots" class="custom-file-upload">
+            <!-- <label for="screenshots" class="custom-file-upload">
                 📁 Choose Screenshots
-            </label>
-            
-            
-            <!-- <input type="file" id="screenshots" name="screenshots" accept="image/*" multiple required> -->
+            </label> -->
             <label for="waypoint_input">Select Your Starting Location</label>
             <div class="waypoint-input-wrapper">
                 <input type="text" id="waypoint_input" name="waypoint_input" autocomplete="off" />
                 <div id="waypoint_dropdown" class="dropdown-list" style="display:none;"></div>
             </div>
+            
+            <!-- <input type="file" id="screenshots" name="screenshots" accept="image/*" multiple required> -->
+            <div id="locations-container">
+                <label style="margin-top: 1em; font-size: 1.2em; font-weight: bold;">Commodity</label>
+                <div class="locations-row" style="display: flex; gap: 2rem;">
+                    <!-- Pick Up Column -->
+                    <div class="pickup-col" style="flex: 1;">
+                        <label for="pickup_location_1">Pick Up Location</label>
+                        <div class="waypoint-input-wrapper">
+                            <input type="text" id="pickup_location_1" name="pickup_location[]" autocomplete="off" />
+                            <div id="pickup_location_dropdown_1" class="dropdown-list" style="display:none;"></div>
+                        </div>
+                        <label for="pickup_item_1" style="margin-top: 1em;">Pick Up Item</label>
+                        <div class="waypoint-input-wrapper">
+                            <input type="text" id="pickup_item_1" name="pickup_item[]" autocomplete="off" />
+                            <div id="pickup_item_dropdown_1" class="dropdown-list" style="display:none;"></div>
+                        </div>
+                        <label for="pickup_scu_1" style="margin-top: 1em;">SCU Total</label>
+                        <div class="waypoint-input-wrapper">
+                            <input type="text" id="pickup_scu_1" name="pickup_scu[]" autocomplete="off" />
+                        </div>
+                        <button type="button" id="add-pickup-btn" style="margin-top:1em;">➕ Add Pick Up</button>
+                    </div>
+                    <!-- Drop Off Column -->
+                    <div class="dropoff-col" style="flex: 1;">
+                        <label for="dropoff_location_1">Drop Off Location</label>
+                        <div class="waypoint-input-wrapper">
+                            <input type="text" id="dropoff_location_1" name="dropoff_location[]" autocomplete="off" />
+                            <div id="dropoff_location_dropdown_1" class="dropdown-list" style="display:none;"></div>
+                        </div>
+                        <label for="dropoff_item_1" style="margin-top: 1em;">Drop Off Item</label>
+                        <div class="waypoint-input-wrapper">
+                            <input type="text" id="dropoff_item_1" name="dropoff_item[]" autocomplete="off" />
+                            <div id="dropoff_item_dropdown_1" class="dropdown-list" style="display:none;"></div>
+                        </div>
+                        <label for="dropoff_scu_1" style="margin-top: 1em;">SCU Total</label>
+                        <div class="waypoint-input-wrapper">
+                            <input type="text" id="dropoff_scu_1" name="dropoff_scu[]" autocomplete="off" />
+                        </div>
+                        <button type="button" id="add-dropoff-btn" style="margin-top:1em;">➕ Add Drop Off</button>
+                    </div>
+                </div>
+            </div>
+                <!-- <tr>
+                    <td>
+                        <label for="waypoint_input">Select Your Starting Location</label>
+                        <div class="waypoint-input-wrapper">
+                            <input type="text" id="waypoint_input" name="waypoint_input" autocomplete="off" />
+                            <div id="waypoint_dropdown" class="dropdown-list" style="display:none;"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <label for="waypoint_input">Destination</label>
+                        <div class="waypoint-input-wrapper">
+                            <input type="text" id="waypoint_input" name="waypoint_input" autocomplete="off" />
+                            <div id="waypoint_dropdown" class="dropdown-list" style="display:none;"></div>
+                        </div>
+                    </td>
+                </tr> -->
+            </table>
+            
             
             <!-- <datalist id="waypoints">
                 <option value="">Loading...</option>
@@ -35,10 +93,10 @@
             
             
             
-            <label for="cargo_capacity">Cargo Capacity (SCU):</label>
-            <input type="number" name="cargo_capacity" id="cargo_capacity" value="32" min="1" required>
+            <!-- <label for="cargo_capacity">Cargo Capacity (SCU):</label>
+            <input type="number" name="cargo_capacity" id="cargo_capacity" value="32" min="1" required> -->
 
-            <button type="submit">🚀 Upload & Optimize</button>
+            <button type="submit">🚀 Apply</button>
         </form>
     </div>
 </body>
