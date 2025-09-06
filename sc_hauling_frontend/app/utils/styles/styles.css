@@ -6,82 +6,9 @@ body {
     padding: 40px;
     text-align: center;
 }
-
-.header {
-    /* background: linear-gradient(
-    to TOP,
-    #cc7e00 40%,
-    black 60%
-  ); */
-    background: linear-gradient(to top, black, 30%, #cc7e00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2.5em;
-    font-weight: bold;
+h2,h3,h4{
+    color: #ccc;
     margin-bottom: 20px;
-}
-
-.waypoint-input-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-#waypoint_input {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-
-.dropdown-list {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #003166;
-    border: 1px solid #ccc;
-    max-height: 300px;
-    overflow-y: auto;
-    z-index: 1000;
-    box-sizing: border-box;
-    color: white;
-}
-.form-card {
-    background: white;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensure dropdown is positioned relative to form */
-}
-.dropdown-list div {
-    padding: 8px;
-    cursor: pointer;
-}
-.dropdown-list div:hover {
-    background: #eee;
-}
-
-.locations-container {
-    margin-top: 20px;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #003166;
-}
-
-
-
-
-
-
-
-
-.form_heading{
-    color: #333;
 }
 
 form {
@@ -91,40 +18,7 @@ form {
     color: #333;
 }
 
-input[type="number"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-}
 
-input[type="file"] {
-    display: none;
-}
-
-.custom-file-upload {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.custom-file-upload:hover {
-    background-color: #45a049;
-}
-
-
-.preview img {
-    max-width: 300px;
-    margin: 10px;
-    border: 2px solid #555;
-    border-radius: 8px;
-    display: inline-block;
-}
 
 button[type="submit"] {
     background-color: #007BFF;
@@ -141,10 +35,19 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+#waypoint_input {
+    width: 100%;
+    box-sizing: border-box;
+}
 
-ul, ol {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 10px;
-    text-align: center;
+.input-field[data-tag="pickup_location"],
+.input-field[data-tag="dropoff_location"],
+.input-field[data-tag="pickup_item"],
+.input-field[data-tag="dropoff_item"],
+.scu-field {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
