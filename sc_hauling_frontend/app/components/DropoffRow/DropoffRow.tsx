@@ -3,10 +3,12 @@ import AutocompleteInput from "../AutocompleteInput/AutocompleteInput";
 
 interface Props {
   index: number;
+  data: { location: string; item: string; scu: number };
+  onChange: (data: { location: string; item: string; scu: number }) => void;
   onRemove?: () => void;
 }
 
-export default function DropoffRow({ index, onRemove }: Props) {
+export default function DropoffRow({ index, data, onChange, onRemove }: Props) {
   return (
     <div
       style={{
@@ -17,19 +19,34 @@ export default function DropoffRow({ index, onRemove }: Props) {
       }}
     >
       <h3>Drop Off #{index + 1}</h3>
+
+      {/* Location */}
       <AutocompleteInput
         placeholder="Drop Off Location"
         apiUrl="http://127.0.0.1:5000/api/waypoints"
         tag="dropoff_location"
+        value={data.location}
+        onChange={(val) => onChange({ ...data, location: val })}
       />
+
+      {/* Item */}
       <AutocompleteInput
         placeholder="Drop Off Item"
-        apiUrl="http://127.0.0.1:5000/api/items"  // NEW: fetch items dynamically
+        apiUrl="http://127.0.0.1:5000/api/items"
         tag="dropoff_item"
+        value={data.item}
+        onChange={(val) => onChange({ ...data, item: val })}
       />
-      <input className="scu-field"
+
+      {/* SCU */}
+      <input
+        className="scu-field"
         type="number"
         placeholder="SCU Total"
+        value={data.scu}
+        onChange={(e) =>
+          onChange({ ...data, scu: Number(e.target.value) || 0 })
+        }
         style={{
           padding: 10,
           marginTop: 5,
@@ -38,6 +55,8 @@ export default function DropoffRow({ index, onRemove }: Props) {
           border: "1px solid #ccc",
         }}
       />
+
+      {/* Remove button */}
       {onRemove && (
         <button onClick={onRemove} style={{ marginTop: 5 }}>
           Remove

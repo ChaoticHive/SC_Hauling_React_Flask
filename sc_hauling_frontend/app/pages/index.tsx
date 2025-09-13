@@ -4,37 +4,111 @@ import DropoffRow from "../components/DropoffRow/DropoffRow";
 import PickupRow from "../components/PickupRow/PickupRow";
 import "../utils/styles/styles.css";
 
+// Shared data structure for pickups/dropoffs
+interface LocationData {
+    location: string;
+    item: string;
+    scu: number;
+}
+
 interface Contract {
     id: number;
-    pickups: number[];
-    dropoffs: number[];
+    pickups: LocationData[];
+    dropoffs: LocationData[];
 }
 
 export default function Home() {
     const [contracts, setContracts] = useState<Contract[]>([
-        { id: 0, pickups: [0], dropoffs: [0] },
+        {
+            id: 0,
+            pickups: [{ location: "", item: "", scu: 0 }],
+            dropoffs: [{ location: "", item: "", scu: 0 }],
+        },
     ]);
 
     const addContract = () => {
         setContracts([
             ...contracts,
-            { id: contracts.length, pickups: [0], dropoffs: [0] },
+            {
+                id: contracts.length,
+                pickups: [{ location: "", item: "", scu: 0 }],
+                dropoffs: [{ location: "", item: "", scu: 0 }],
+            },
         ]);
     };
 
     const removeContract = (id: number) => {
-        if (contracts.length === 1) return; // minimum 1 contract
+        if (contracts.length === 1) return; // ensure at least 1
         setContracts(contracts.filter((c) => c.id !== id));
     };
 
+    const updatePickup = (contractId: number, idx: number, data: LocationData) => {
+        setContracts((prev) =>
+            prev.map((c) =>
+                c.id === contractId
+                    ? {
+                        ...c,
+                        pickups: c.pickups.map((p, i) => (i === idx ? data : p)),
+                    }
+                    : c
+            )
+        );
+    };
+
+    const updateDropoff = (contractId: number, idx: number, data: LocationData) => {
+        setContracts((prev) =>
+            prev.map((c) =>
+                c.id === contractId
+                    ? {
+                        ...c,
+                        dropoffs: c.dropoffs.map((d, i) => (i === idx ? data : d)),
+                    }
+                    : c
+            )
+        );
+    };
+
+const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const payload = {
+        startLocation,   // make sure you track this with useState
+        contracts,       // this is your existing state
+    };
+
+    try {
+        const res = await fetch("http://127.0.0.1:5000/api/contracts", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) {
+            throw new Error(`Server error: ${res.status}`);
+        }
+
+        const data = await res.json();
+        console.log("Server response:", data);
+    } catch (err) {
+        console.error("Error submitting contracts:", err);
+    }
+};
+
+    const [startLocation, setStartLocation] = useState("");
+
     return (
-        <form style={{ maxWidth: 800, margin: "0 auto", padding: 20 }}>
+        <form
+            onSubmit={handleSubmit}
+            style={{ maxWidth: 800, margin: "0 auto", padding: 20 }}
+        >
             {/* Starting Location */}
             <h2>Starting Location</h2>
-            <WaypointInput
-                apiUrl="http://127.0.0.1:5000/api/waypoints"
-                placeholder="Select Your Starting Location"
-            />
+        <WaypointInput
+            apiUrl="http://127.0.0.1:5000/api/waypoints"
+            placeholder="Select Your Starting Location"
+            value={startLocation}
+            onChange={(val) => setStartLocation(val)}
+        />
 
             {/* Contracts */}
             <h2>Contracts</h2>
@@ -53,88 +127,105 @@ export default function Home() {
 
                     {/* Pickups */}
                     <h4>Pickups</h4>
-                    {contract.pickups.map((id, idx) => (
+                    {contract.pickups.map((pickup, idx) => (
                         <PickupRow
-                            key={id}
+                            key={idx}
                             index={idx}
-                            onRemove={() => {
-                                const updated = contracts.map((c) =>
-                                    c.id === contract.id
-                                        ? {
-                                            ...c,
-                                            pickups: c.pickups.filter((_, i) => i !== idx),
-                                        }
-                                        : c
-                                );
-                                setContracts(updated);
-                            }}
+                            data={pickup}
+                            onChange={(updated) => updatePickup(contract.id, idx, updated)}
+                            onRemove={() =>
+                                setContracts((prev) =>
+                                    prev.map((c) =>
+                                        c.id === contract.id
+                                            ? {
+                                                ...c,
+                                                pickups: c.pickups.filter((_, i) => i !== idx),
+                                            }
+                                            : c
+                                    )
+                                )
+                            }
                         />
                     ))}
                     <button
                         type="button"
-                        onClick={() => {
-                            const updated = contracts.map((c) =>
-                                c.id === contract.id
-                                    ? { ...c, pickups: [...c.pickups, c.pickups.length] }
-                                    : c
-                            );
-                            setContracts(updated);
-                        }}
+                        onClick={() =>
+                            setContracts((prev) =>
+                                prev.map((c) =>
+                                    c.id === contract.id
+                                        ? {
+                                            ...c,
+                                            pickups: [
+                                                ...c.pickups,
+                                                { location: "", item: "", scu: 0 },
+                                            ],
+                                        }
+                                        : c
+                                )
+                            )
+                        }
                     >
                         ➕ Add Pickup
                     </button>
 
                     {/* Dropoffs */}
                     <h4>Dropoffs</h4>
-                    {contract.dropoffs.map((id, idx) => (
+                    {contract.dropoffs.map((dropoff, idx) => (
                         <DropoffRow
-                            key={id}
+                            key={idx}
                             index={idx}
-                            onRemove={() => {
-                                const updated = contracts.map((c) =>
-                                    c.id === contract.id
-                                        ? {
-                                            ...c,
-                                            dropoffs: c.dropoffs.filter((_, i) => i !== idx),
-                                        }
-                                        : c
-                                );
-                                setContracts(updated);
-                            }}
+                            data={dropoff}
+                            onChange={(updated) => updateDropoff(contract.id, idx, updated)}
+                            onRemove={() =>
+                                setContracts((prev) =>
+                                    prev.map((c) =>
+                                        c.id === contract.id
+                                            ? {
+                                                ...c,
+                                                dropoffs: c.dropoffs.filter((_, i) => i !== idx),
+                                            }
+                                            : c
+                                    )
+                                )
+                            }
                         />
                     ))}
                     <button
                         type="button"
-                        onClick={() => {
-                            const updated = contracts.map((c) =>
-                                c.id === contract.id
-                                    ? { ...c, dropoffs: [...c.dropoffs, c.dropoffs.length] }
-                                    : c
-                            );
-                            setContracts(updated);
-                        }}
+                        onClick={() =>
+                            setContracts((prev) =>
+                                prev.map((c) =>
+                                    c.id === contract.id
+                                        ? {
+                                            ...c,
+                                            dropoffs: [
+                                                ...c.dropoffs,
+                                                { location: "", item: "", scu: 0 },
+                                            ],
+                                        }
+                                        : c
+                                )
+                            )
+                        }
                     >
                         ➕ Add Dropoff
                     </button>
-                </div>
-            ))}
-
-            {/* Add Contract Button */}
-            <button
-                type="button"
-                onClick={addContract}
-                style={{ marginBottom: 20 }}
-            >
-                ➕ Add Contract
-            </button>
-            {/* Remove Contract */}
-            <button
+                    <br />
+                    {/* Remove Contract */}
+                    <button
                         type="button"
                         style={{ marginTop: 10 }}
                         onClick={() => removeContract(contract.id)}
                     >
                         ❌ Remove Contract
                     </button>
+                </div>
+            ))}
+
+            {/* Add Contract Button */}
+            <button type="button" onClick={addContract} style={{ marginBottom: 20 }}>
+                ➕ Add Contract
+            </button>
 
             {/* Submit */}
             <button type="submit" style={{ marginTop: 20 }}>

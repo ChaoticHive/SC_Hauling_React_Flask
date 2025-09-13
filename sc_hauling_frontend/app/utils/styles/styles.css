@@ -17,8 +17,17 @@ form {
     gap: 15px;
     color: #333;
 }
-
-
+button {
+    background-color: #ff9900;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
 button[type="submit"] {
     background-color: #007BFF;
