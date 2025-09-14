@@ -3,6 +3,7 @@ from flask import Flask, send_from_directory, jsonify, request
 import json
 import os
 from flask_cors import CORS
+from utils.RoutePlanner import process_contracts
 
 app = Flask(__name__, static_folder="../sc_hauling_frontend/app", static_url_path="/")
 # CORS(app)  # Enable CORS for all routes
@@ -50,7 +51,9 @@ def contracts():
 
         print(f"Start Location: {start_location}")
         print(f"Contracts: {contracts}")
-
+        # Call the RoutePlanner to process contracts
+        result = process_contracts(data)
+        print(f"RoutePlanner result: {result}")
         # Return a structured response
         return jsonify({
             "status": "success",

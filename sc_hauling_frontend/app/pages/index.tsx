@@ -25,6 +25,7 @@ export default function Home() {
             dropoffs: [{ location: "", item: "", scu: 0 }],
         },
     ]);
+    const [scuLimit, setScuLimit] = useState<number>(0); // Ship Capacity
 
     const addContract = () => {
         setContracts([
@@ -73,6 +74,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     const payload = {
         startLocation,   // make sure you track this with useState
+        scuLimit,        // this is your existing state
         contracts,       // this is your existing state
     };
 
@@ -109,6 +111,16 @@ const handleSubmit = async (e: React.FormEvent) => {
             value={startLocation}
             onChange={(val) => setStartLocation(val)}
         />
+
+        {/* SCU Limit */}
+            <h2>Ship Capacity</h2>
+            <input
+                type="number"
+                placeholder="Total SCU Capacity"
+                value={scuLimit}
+                onChange={(e) => setScuLimit(Number(e.target.value))}
+                style={{ padding: 10, width: "100%", borderRadius: 8, border: "1px solid #ccc" }}
+            />
 
             {/* Contracts */}
             <h2>Contracts</h2>
